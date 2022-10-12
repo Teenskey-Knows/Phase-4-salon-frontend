@@ -11,6 +11,10 @@ function Account() {
           bordered
           className="account_card"
         ></Card>
+        <Card title="Personal information" 
+        bordered className="account_card">
+            
+        </Card>
       </div>
     </div>
   );

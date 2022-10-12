@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="container">
       <nav className="nav">
-        <ul className="nav_items nav-items-flex">
+        <ul className="nav_items items-flex">
           <li className="nav_item">Suka</li>
           <li className="nav_item">SERVICES</li>
           <li className="nav_item">Log In </li>

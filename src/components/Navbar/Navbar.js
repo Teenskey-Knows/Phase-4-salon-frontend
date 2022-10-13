@@ -7,18 +7,21 @@ function Navbar() {
   return (
     <div className="nav">
     <nav>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
+        
+        <NavLink 
+                  to="/services"
+                  exact="true"
+               >
+                    <button className="btn">SERVICES</button>
+                </NavLink>
+                
           <NavLink 
                   to="/about"
                   exact="true"
                >
                     <button className="btn">ABOUT</button>
                 </NavLink>
-        </li>
+        
         <NavLink 
                   to="/signup"
                   exact="true"

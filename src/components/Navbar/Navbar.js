@@ -7,10 +7,6 @@ function Navbar() {
   return (
     <div className="nav">
     <nav>
-      
-        <li>
-          <Link to="/">Home</Link>
-        </li>
         <li>
           <Link to="/services">Services</Link>
         </li>

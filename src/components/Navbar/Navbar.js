@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink} from "react-router-dom";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import "./Navbar.css";
 
@@ -22,9 +23,7 @@ function Navbar() {
                     <button className="btn">Posts</button>
                 </NavLink>
                 
-        <li>
-          <Link to="/signup">Signup</Link>
-        </li>
+      
       </ul>
     </nav>
   );

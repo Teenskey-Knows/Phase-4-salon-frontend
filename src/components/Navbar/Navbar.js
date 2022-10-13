@@ -12,6 +12,12 @@ function Navbar() {
         </li>
         <li>
           <Link to="/about">About</Link>
+          <NavLink 
+                  to="/about"
+                  exact="true"
+               >
+                    <button className="btn">ABOUT</button>
+                </NavLink>
         </li>
         <NavLink 
                   to="/signup"
@@ -24,7 +30,7 @@ function Navbar() {
                   exact="true"
                   
                 >
-                    <button className="btn">Home</button>
+                    <button className="btn">HOME</button>
                 </NavLink>
       
       

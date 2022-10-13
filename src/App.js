@@ -6,7 +6,7 @@ import Services from "../src/Pages/Services/Services";
 import About from "../src/Pages/About /About";
 import Signup from "../src/Pages/Signup/Signup";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -21,6 +21,4 @@ function App() {
   );
 }
 
-export default App;
 
-ReactDOM.render(<App />, document.getElementById("root"));

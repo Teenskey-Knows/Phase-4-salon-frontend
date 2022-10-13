@@ -1,0 +1,25 @@
+.container-wrapper {
+    background: white;
+    height: 600px;
+    margin-top: 20px;
+    width: 98%;
+    padding: 10px;
+    border: solid;
+}
+
+.text-container {
+    margin-top: 200px;
+    width: 40%;
+    height: 300px;
+    padding: 10px;
+    float: left;
+}
+
+.image-container img {
+   width: 450px;
+   height: 450px;
+   margin: 50px 50px;
+   padding: 10px;
+   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+}

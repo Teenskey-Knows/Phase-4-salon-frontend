@@ -1,13 +1,12 @@
 #navbar {
     font-family: Lato, Helvetica, Arial, sans-serif;
-    background: whitesmoke;
+    background: white;
     position: fixed;
     top: 0;
     height: 80px;
     line-height: 60px;
     width: 100%;
     z-index: 10;
-    color: #4c4343;
 }
 
 .navbar-wrapper {
@@ -18,14 +17,62 @@
 
 .logo {
     float: left;
-    margin-left: 25px;
+    margin-left: 15px;
     font-size: 2em;
     height: 80px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    font-weight: 650;
 }
 
 .logo a {
     text-decoration: none;
+    color: #ff1694;
 }
 
+#navbar ul {
+    display: inline-block;
+    list-style: none;
+    margin-top: 2px;
+    text-align: right;
+    float: right;
+}
+
+#navbar li {
+    display: inline-block;
+}
+
+#navbar li a {
+    color:#4c4343;
+    display: block;
+    font-size: 1em;
+    height: 80px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#navbar li a:hover {
+    color: #f25278;
+    transition: all 0.5s ease-in-out;
+    font-size: 1.2em;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .navbar-wrapper {
+        width: 90%
+    }  
+} @media (max-width: 638px) {
+    .navbar-wrapper {
+        width: 100%;
+    }    
+} @media (max-width: 768px) {
+    .logo {
+        margin-left: 20px;
+    }    
+} 
 

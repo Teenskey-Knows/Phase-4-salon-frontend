@@ -4,6 +4,7 @@ import './Signup.css'
 function Signup(){
     return (
 <div>
+    <h1>Signup</h1>
         <form action="action_page.php" style="border:1px solid #ccc">
   
     <h1>Sign Up</h1>

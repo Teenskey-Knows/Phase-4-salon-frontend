@@ -5,8 +5,9 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
+    <div className="nav">
     <nav>
-      <ul>
+      
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -22,10 +23,17 @@ function Navbar() {
                 >
                     <button className="btn">SIGNUP</button>
                 </NavLink>
-                
+                <NavLink 
+                  to="/"
+                  exact="true"
+                  
+                >
+                    <button className="btn">Home</button>
+                </NavLink>
       
-      </ul>
+      
     </nav>
+    </div>
   );
 }
 

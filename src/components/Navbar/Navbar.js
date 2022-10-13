@@ -15,6 +15,13 @@ function Navbar() {
         <li>
           <Link to="/about">About</Link>
         </li>
+        <NavLink 
+                  to="/signup"
+                  exact="true"
+                >
+                    <button className="btn">Posts</button>
+                </NavLink>
+                
         <li>
           <Link to="/signup">Signup</Link>
         </li>

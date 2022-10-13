@@ -1,19 +1,26 @@
 import React from "react";
+import { BrowserRouter, Link, Route } from "react-router-dom";
 import "./Navbar.css";
 
-function Header() {
+function Navbar() {
   return (
-    <header className="container">
-      <nav className="nav">
-        <ul className="nav_items items-flex">
-          <li className="nav_item">Suka</li>
-          <li className="nav_item">SERVICES</li>
-          <li className="nav_item">Log In </li>
-          <li className="nav_item">Sign Up</li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/signup">Signup</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
-export default Header;
+export default Navbar;

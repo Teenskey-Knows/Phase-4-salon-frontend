@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./stateless-components/Navbar/Navbar";
 import Account from "./statefull-components/Account/Account";
 
@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <main className="container"></main>
+        <main className="container">
+          <Route path={Routes.ACCOUNT} component={Account} />
+        </main>
       </BrowserRouter>
     </div>
   );

@@ -20,7 +20,7 @@ function Navbar() {
                   to="/signup"
                   exact="true"
                 >
-                    <button className="btn">Posts</button>
+                    <button className="btn">SIGNUP</button>
                 </NavLink>
                 
       

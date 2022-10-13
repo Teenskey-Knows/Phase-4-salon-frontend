@@ -1,0 +1,28 @@
+.account_card {
+    width: 350px;
+}
+
+.account_card:first-of-type {
+    margin-right: 30px;
+}
+
+.account-card-wrappper {
+    margin: 30px auto;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 560px) {
+    .account_card {
+        width: 300px;
+    }
+
+    .account_card .form_field, 
+    .account_card form, 
+    .account_card .form_field input, 
+    .account_card .form_button {
+        width: 230px;
+    }
+    
+}

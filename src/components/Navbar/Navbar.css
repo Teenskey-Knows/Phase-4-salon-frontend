@@ -1,18 +1,31 @@
-header.container {
-    padding: 30px 80px;
-    background-color: white;
+#navbar {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    background: whitesmoke;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    line-height: 60px;
+    width: 100%;
+    z-index: 10;
+    color: #4c4343;
+}
+
+.navbar-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.logo {
+    float: left;
+    margin-left: 25px;
+    font-size: 2em;
+    height: 80px;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 
-/* Responsive Navbar */
-@media (max-width: 1100px) {
-    header.container {
-        padding: 30px 40px
-    }
-}
-
-@media (max-width: 768px) {
-    header.container {
-        padding: 30px
-    }
-}

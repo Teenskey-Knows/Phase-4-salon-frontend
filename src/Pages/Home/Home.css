@@ -42,7 +42,7 @@
     max-width: 1000px;
     background-color: #f7f2f2;
     margin: 6%;
-    border-radius: ;
+    border-radius: 25px;
 }
 
 .welcome-card > img {
@@ -50,6 +50,7 @@
     vertical-align: top;
     width: 46%;
     margin: 20px 30px 0 0;
+    border-radius: 70% 34% 30% 70% / 60% 34% 96% 100%;
 }
 
 .welcome-card > .welcome-card-text {
@@ -58,6 +59,8 @@
     text-align: center;
     vertical-align: middle;
     line-height: 50px;
+    color:  #4c4343;
+    font-size: 1.2em;
 }
 /* Media Queries */
 @media (max-width: 700px) {

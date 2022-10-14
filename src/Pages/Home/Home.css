@@ -31,11 +31,34 @@
 }
 
 .container > hr {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Welcome Card */
+.welcome-card {
+    padding: 20px 40px 40px;
+    max-width: 1000px;
+    background-color: #f7f2f2;
+    margin: 6%;
+    border-radius: ;
+}
+
+.welcome-card > img {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    margin: 20px 30px 0 0;
+}
+
+.welcome-card > .welcome-card-text {
+    display: inline-block;
+    width: 46%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
 /* Media Queries */
 @media (max-width: 700px) {
     .text-container, .image-container {
@@ -46,3 +69,10 @@
         padding-bottom: 60px;
     }
   }
+
+@media (max-width: 700px) {
+    .welcome-card > img, .welcome-card > .welcome-card-text{
+        width: 100%;
+    }
+}
+

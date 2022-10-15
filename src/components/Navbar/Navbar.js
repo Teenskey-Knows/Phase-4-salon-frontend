@@ -14,6 +14,13 @@ function Navbar() {
                >
                     <button className="btn">SERVICES</button>
                 </NavLink>
+
+                <NavLink 
+                  to="/services"
+                  exact="true"
+               >
+                    <button className="btn">SERVICES</button>
+                </NavLink>
                 
           <NavLink 
                   to="/about"

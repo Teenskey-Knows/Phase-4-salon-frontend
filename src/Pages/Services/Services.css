@@ -1,0 +1,43 @@
+.wrapper {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+.storylist {
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: auto;
+    max-width: 1400px;
+    padding: 20px;
+}
+
+.card {
+    max-width: 24rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 1em 1em 3em rgba(0 0 0/0.1);
+    background-color: #f3e7e2;
+    transition: transform 300ms ease;
+    margin: 10px;
+    color: #4c4343;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card > h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card > p {
+    text-align: center;
+    font-size: 1em;
+}

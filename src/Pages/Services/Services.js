@@ -36,10 +36,10 @@ const Services = () => {
       {error && (
         <div>{`Seems likes there's a problem loading services - ${error}`}</div>
       )}
-      <ul>
+      <ul className="storylist">
         {services &&
           services.map(({ id, title, body }) => (
-            <li key={id}>
+            <li className="card" key={id}>
               <h2>{title}</h2>
               <p>{body}</p>
             </li>

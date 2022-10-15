@@ -1,0 +1,22 @@
+.styled-card {
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  display:flex;
+  flex-flow: column wrap;
+  background-color:white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.4rem;
+  };
+  
+p {
+    font-size: 1.4rem;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  

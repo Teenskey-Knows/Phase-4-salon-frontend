@@ -8,17 +8,23 @@ import Signup from "../src/Pages/Signup/Signup";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          <Route path="about" element={<About />} />
-          <Route path="signup" element={<Signup />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    <div>
+      <Home />
+      <Services />
+
+    </div>
+  //     {/* <Routes>
+  //       <Route path="/" element={<Layout />}>
+  //         <Route index element={<Home />} />
+  //         <Route path="services" element={<Services />} />
+  //         <Route path="about" element={<About />} />
+  //         <Route path="signup" element={<Signup />} />
+  //       </Route>
+  //     </Routes>
+  //   </BrowserRouter> */}
   );
+// {/* } */
 }
 
 

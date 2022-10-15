@@ -1,41 +1,68 @@
-import React from "react";
-import './Signup.css'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import React, { Component } from "react";
 
-function Signup(){
+function Register({ setCurrentUser }) {
+  const history = useNavigate();
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    confirm_password: "",
+  });
 
-    
-    return (
-<div>
-    <h1>Signup</h1>
-        <form action="action_page.php" style="border:1px solid #ccc">
-  
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-    
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required></input>
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((r) => r.json())
+      .then((user) => {
+        setCurrentUser(user);
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required></input>
+        history("/posts");
+      });
+  }
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required></input>
+  return (
+    <div className="login">
+      <form className="sign" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+        />
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</input>
-    </label>
-
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-    
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
-
-</form>
-</div>
-    )
-    
+        <input
+          type="password"
+          name="password"
+          placeholder="Confirm Password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
 }
 
-export default Signup;
+export default Register;

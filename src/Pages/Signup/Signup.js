@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { Component } from "react";
+
 
 function Register({ setCurrentUser }) {
   const history = useNavigate();

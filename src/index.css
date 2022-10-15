@@ -10,6 +10,7 @@ body {
 form.sign > input,
 form.sign > textarea {
   font-size: 1em;
+  background-color: aliceblue;
   font-family: sans-serif;
   margin-bottom: 0.5em;
 }
@@ -22,8 +23,8 @@ form.sign > textarea {
 }
 
 .login{
-  background:aqua;
-  color: black;
+  background:white;
+  color: pink;
   margin-top: 6%;
   width: 50%;
   margin-left: 25%;

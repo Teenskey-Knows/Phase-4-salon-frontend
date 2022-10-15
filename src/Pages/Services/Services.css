@@ -1,8 +1,9 @@
-.wrapper {
+.services-container {
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    background-color: #f3e7e2;
 }
 
 

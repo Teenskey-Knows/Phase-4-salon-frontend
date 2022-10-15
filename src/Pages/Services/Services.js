@@ -38,9 +38,9 @@ const Services = () => {
       )}
       <ul className="storylist">
         {services &&
-          services.map(({ id,image,service_type,pricing,providers}) => (
+          services.map(({ id, image, service_type, pricing }) => (
             <li className="card" key={id}>
-              <img src={image}/>
+              <img src={image} />
               <h2>{service_type}</h2>
               <p>{pricing}</p>
             </li>

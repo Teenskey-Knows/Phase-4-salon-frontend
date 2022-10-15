@@ -7,7 +7,7 @@ const Services = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts/?_limit=10")
+    fetch("https://thawing-journey-77356.herokuapp.com/services")
       .then((response) => {
         if (!response.ok) {
           throw new Error(
@@ -38,10 +38,11 @@ const Services = () => {
       )}
       <ul className="storylist">
         {services &&
-          services.map(({ id, title, body }) => (
+          services.map(({ id,image,service_type,pricing,providers}) => (
             <li className="card" key={id}>
-              <h2>{title}</h2>
-              <p>{body}</p>
+              <img src={image}/>
+              <h2>{service_type}</h2>
+              <p>{pricing}</p>
             </li>
           ))}
       </ul>

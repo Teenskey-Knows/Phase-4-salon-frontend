@@ -1,5 +1,5 @@
 import { ReactDOM } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout /Layout";
 import Home from "../src/Pages/Home/Home";
 import Services from "../src/Pages/Services/Services";
@@ -8,23 +8,19 @@ import Signup from "../src/Pages/Signup/Signup";
 
 export default function App() {
   return (
-    // <BrowserRouter>
-    <div>
-      <Home />
-      <Services />
-
-    </div>
-  //     {/* <Routes>
-  //       <Route path="/" element={<Layout />}>
-  //         <Route index element={<Home />} />
-  //         <Route path="services" element={<Services />} />
-  //         <Route path="about" element={<About />} />
-  //         <Route path="signup" element={<Signup />} />
-  //       </Route>
-  //     </Routes>
-  //   </BrowserRouter> */}
+    <>
+      <Router>
+        <Layout />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
+    </>
   );
-// {/* } */
 }
+  
 
 

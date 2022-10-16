@@ -2,35 +2,32 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function Login({ setCurrentUser }) {
+function Login({ setProvider }) {
     const history = useNavigate();
-    const [formData, setFormData] = useState({
-      username: "",
-      password: "",
-    });
-  
-    function handleChange(e) {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    }
+    const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+    // function handleChange(e) {
+    //   setFormData({
+    //     ...formData,
+    //     [e.target.email]: e.target.value,
+    //   });
+    // }
   
     function handleSubmit(e) {
-      console.log(JSON.stringify(formData))
+      console.log(JSON.stringify({email, password}))
       e.preventDefault();
-      fetch("/login", {
+      fetch("https://thawing-journey-77356.herokuapp.com/provider/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({email, password})
       })
         .then((r) => {
          if(r.ok){
           r.json()
-          .then((user) => {
-            setCurrentUser(user);
+          .then((provider) => {
+            setProvider(provider);
             history("/posts");
             // alert('Login successful')
           });
@@ -49,17 +46,17 @@ function Login({ setCurrentUser }) {
     <form className="sign" onSubmit={handleSubmit}>
       <input
         type="text"
-        name="username"
-        placeholder="Username"
-        value={formData.username}
-        onChange={handleChange}
+        name="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
         name="password"
         placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
       <button type="submit">Login</button>
     </form>

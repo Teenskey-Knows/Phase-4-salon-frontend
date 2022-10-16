@@ -19,7 +19,7 @@ function Register({ setCurrentUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/users", {
+    fetch("https://thawing-journey-77356.herokuapp.com/provider", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,9 +28,9 @@ function Register({ setCurrentUser }) {
     })
       .then((r) => r.json())
       .then((user) => {
-        setCurrentUser(user);
+        // setCurrentUser(user);
 
-        history("/posts");
+        history("/services");
       });
   }
 

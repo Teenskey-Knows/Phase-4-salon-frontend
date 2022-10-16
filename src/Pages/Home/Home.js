@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Carousel, { CarouselItem } from "../../components/Carousel/Carousel";
+import CarouselComponent, { CarouselItem } from "../../components/CarouselContainer/CarouselContainer";
 
 function Home() {
   return (
@@ -28,14 +28,7 @@ function Home() {
           </p>
         </div>
       </div>
-      <Carousel>
-        <CarouselItem>1</CarouselItem>
-        <CarouselItem>2</CarouselItem>
-        <CarouselItem>3</CarouselItem>
-        <CarouselItem>4</CarouselItem>
-        <CarouselItem>5</CarouselItem>
-        <CarouselItem>6</CarouselItem>
-      </Carousel>
+      <CarouselComponent/>
     </div>
   );
 }

@@ -1,15 +1,23 @@
 .carousel-wrapper {
     max-width: 900px;
     max-height: 900px;
-    margin: auto;
     text-align: center;
+    margin: 0 auto;
 }
 
+.carousel-item {
+    margin-bottom: -15px;
+}
 
 .carousel-item > img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 60%;
+    max-height: 40%;
     object-fit: cover;
+}
+
+p {
+    font-weight: 400;
+    justify-content:center;
 }
 
 /* .carousel .slide img {

@@ -12,6 +12,7 @@ export default function App() {
     <div>
       <Home />
       <Services />
+      <About />
 
     </div>
   //     {/* <Routes>

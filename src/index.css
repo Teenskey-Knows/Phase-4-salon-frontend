@@ -7,6 +7,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+form.sign > input,
+form.sign > textarea {
+  font-size: 1em;
+  background-color: aliceblue;
+  font-family: sans-serif;
+  margin-bottom: 0.5em;
+}
+
+.sign{
+  border: solid black 1px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.login{
+  background:white;
+  color: pink;
+  margin-top: 6%;
+  width: 50%;
+  margin-left: 25%;
+  
+}
+
+
+
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

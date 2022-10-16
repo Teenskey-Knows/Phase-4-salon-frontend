@@ -20,11 +20,16 @@ function Navbar() {
             <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/login">Login</Link>
           </li>
+
           <li>
             <Link to="/signup">Signup</Link>
           </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          
         </ul>
       </div>
     </nav>

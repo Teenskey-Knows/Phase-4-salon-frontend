@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function Login({ setCurrentUser }) {
+function Login({ setProvider }) {
     const history = useNavigate();
     const [formData, setFormData] = useState({
       username: "",
@@ -19,7 +19,7 @@ function Login({ setCurrentUser }) {
     function handleSubmit(e) {
       console.log(JSON.stringify(formData))
       e.preventDefault();
-      fetch("/login", {
+      fetch("https://thawing-journey-77356.herokuapp.com/provider/stay_loggedIn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,8 +29,8 @@ function Login({ setCurrentUser }) {
         .then((r) => {
          if(r.ok){
           r.json()
-          .then((user) => {
-            setCurrentUser(user);
+          .then((provider) => {
+            setProvider(provider);
             history("/posts");
             // alert('Login successful')
           });

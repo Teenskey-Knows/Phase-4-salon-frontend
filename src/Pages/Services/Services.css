@@ -1,0 +1,49 @@
+.services-container {
+
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    background-color: #f3e7e2;
+}
+
+
+.storylist {
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: auto;
+    max-width: 1400px;
+    padding: 20px;
+}
+
+.card {
+    max-width: 24rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 1em 1em 3em rgba(0 0 0/0.1);
+    background-color: #f3e7e2;
+    transition: transform 300ms ease;
+    color: #4c4343;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card > h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.card > p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.card > img {
+    height: 300px;
+    width: 24rem;
+    object-fit: cover;
+}
